@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="system" method="upgrade">
+  <name>plg_system_richsnippets</name>
+  <author>The Adept Traveler</author>
+  <creationDate>March 2022</creationDate>
+  <copyright>Copyright (C) 2022 The Adept Traveler, Inc. All rights reserved.</copyright>
+  <license>BSD 3 Clause; see LICENSE.txt</license>
+  <authorEmail>joomla@adept.travel</authorEmail>
+  <authorUrl>adept.travel</authorUrl>
+  <version>0.0.2</version>
+  <description>PLG_SYSTEM_RICHSNIPPETS_DESC</description>
+
+  <files>
+    <filename plugin="richsnippets">richsnippets.php</filename>
+    <filename>LICENSE.txt</filename>
+  </files>
+
+  <languages>
+    <language tag="en-GB">language/en-GB/plg_system_richsnippets.ini</language>
+    <language tag="en-GB">language/en-GB/plg_system_richsnippets.sys.ini</language>
+  </languages>
+
+  <config>
+    <fields name="params">
+      <fieldset
+        name="basic">
+
+        <field
+          name="logo"
+          type="media"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_LOGO_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_LOGO_DESC"
+        />
+
+        <field
+          name="clean_author"
+          type="radio"
+          class="btn-group"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_CLEAN_AUTHOR_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_CLEAN_AUTHOR_DESC"
+          default="1">
+
+          <option value="1">JON</option>
+          <option value="0">JOFF</option>
+        </field>
+
+        <field
+          name="meta_desc"
+          type="radio"
+          class="btn-group"
+          default="1"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_META_DESC_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_META_DESC_DESC">
+
+          <option value="1">JON</option>
+          <option value="0">JOFF</option>
+        </field>
+
+        <field
+          name="canonical"
+          type="radio"
+          class="btn-group"
+          default="1"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_CANONICAL_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_CANONICAL_DESC">
+
+          <option value="1">JON</option>
+          <option value="0">JOFF</option>
+        </field>
+
+        <field
+          name="canonical_domain"
+          type="text"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_CANONICAL_DOMAIN_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_CANONICAL_DOMAIN_DESC"
+          default=""
+          filter="string"
+          showon="canonical:1" />
+
+      </fieldset>
+
+      <fieldset
+        name="tab_facebook"
+        label="PLG_SYSTEM_RICHSNIPPETS_FIELDSET_FACEBOOK_LABEL">
+
+        <field
+          name="facebook"
+          type="radio"
+          class="btn-group"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_DESC"
+          default="0">
+
+          <option value="1">JON</option>
+          <option value="0">JOFF</option>
+        </field>
+
+        <field
+          name="facebook_logo"
+          type="media"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_LOGO_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_LOGO_DESC"
+          showon="facebook:1" />
+
+        <field
+          name="facebook_author"
+          type="text"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_AUTHOR_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_AUTHOR_DESC"
+          default=""
+          filter="string"
+          showon="facebook:1" />
+
+        <field
+          name="facebook_pixel"
+          type="textarea"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_PIXEL_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_FACEBOOK_PIXEL_DESC"
+          rows="20"
+          default=""
+          filter="string"
+          showon="facebook:1" />
+      </fieldset>
+
+      <fieldset
+        name="tab_twitter"
+        label="PLG_SYSTEM_RICHSNIPPETS_FIELDSET_TWITTER_LABEL">
+
+        <field
+          name="twitter"
+          type="radio"
+          class="btn-group"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_DESC"
+          default="0">
+
+          <option value="1">JON</option>
+          <option value="0">JOFF</option>
+        </field>
+
+        <field
+          name="twitter_logo"
+          type="media"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_LOGO_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_LOGO_DESC"
+          showon="twitter:1" />
+
+        <field
+          name="twitter_site"
+          type="text"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_SITE_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_SITE_DESC"
+          default=""
+          filter="string"
+          showon="twitter:1" />
+
+        <field
+          name="twitter_site_id"
+          type="text"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_SITE_ID_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_SITE_ID_DESC"
+          default=""
+          filter="string"
+          showon="twitter:1" />
+
+        <field
+          name="twitter_creator"
+          type="text"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_CREATEOR_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_CREATEOR_DESC"
+          default=""
+          filter="string"
+          showon="twitter:1" />
+
+        <field
+          name="twitter_creator_id"
+          type="text"
+          label="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_CREATEOR_ID_LABEL"
+          description="PLG_SYSTEM_RICHSNIPPETS_CONFIG_TWITTER_CREATEOR_ID_DESC"
+          default=""
+          filter="string"
+          showon="twitter:1" />
+
+      </fieldset>
+    </fields>
+  </config>
+</extension>
