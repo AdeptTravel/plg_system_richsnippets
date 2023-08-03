@@ -397,6 +397,10 @@ class PlgSystemRichSnippets extends \Joomla\CMS\Plugin\CMSPlugin
             $cur = imagecreatefromjpeg($src);
             break;
 
+          case 'webp':
+            $cur = imagecreatefromwebp($src);
+            break;
+
           default:
             break;
         }
@@ -413,6 +417,10 @@ class PlgSystemRichSnippets extends \Joomla\CMS\Plugin\CMSPlugin
           case 'jpg':
           case 'jpeg':
             imagejpeg($new, $file);
+            break;
+
+          case 'webp':
+            imagewebp($new, $file);
             break;
 
           default:
